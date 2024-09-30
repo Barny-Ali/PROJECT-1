@@ -1,0 +1,31 @@
+@media screen and (min-width: 641px){
+    
+    
+
+    .desktop {
+        display: none;
+    }
+
+    nav ul li {
+        padding: 0.7em;
+        border-top: solid .2em black;
+        border-bottom: solid .2em black;
+        display: inline-block; /*This lists items horizontaly & allow them to stretch*/ 
+        border-radius: 1em;
+        min-width: 10%;
+        box-shadow: 0.2em 0.2em 0.2em black;
+    }
+
+
+    main {
+        box-shadow: 0.5em 0.5em 0.5em black;
+    }
+
+    main div .center {
+        width:60%;
+    }
+
+    footer {
+        box-shadow: 0.5em 0.5em 0.5em black;
+    }
+}

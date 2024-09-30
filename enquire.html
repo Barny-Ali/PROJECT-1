@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Calculate window tinting cost and submit enquiries."> <!-- Meta description for SEO -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive viewport settings -->
+    <title>Enquire - PrivyScreen</title> <!-- Page title -->
+    <link rel="stylesheet" href="css/style.css"> <!-- Link to external CSS file -->
+    <script src="scripts/cost.js" defer></script> <!-- Load JavaScript file asynchronously -->
+</head>
+<body>
+    <!-- Header section -->
+    <header class="flex-container"> <!-- Flexbox container for header -->
+        <div class="logo-container">
+            <a href="index.html" aria-label="Home"> <!-- Logo link with accessible label -->
+                <img src="media/images/PRIVCY.pdf_20240501_142534_0000.png" alt="PRIVCY"> <!-- Logo image with alternative text -->
+            </a>
+        </div>
+        <nav aria-label="Main Navigation"> <!-- Accessible navigation section -->
+            <ul>
+                <li><a href="index.html">Home</a></li> <!-- Navigation links -->
+                <li><a href="about.html">About</a></li>
+                <li><a href="enquire.html">Enquire</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content section -->
+    <main class="flex-container"> <!-- Flexbox container for main content -->
+        <!-- Calculator Container -->
+        <div class="calculator-container"> <!-- Container for calculators, using flexbox layout -->
+            <!-- First calculator -->
+            <div class="calculator"> <!-- Individual calculator section -->
+                <h2>Window Tinting Cost Calculator</h1> <!-- Calculator title -->
+                <form id="tintingForm"> <!-- Form for tinting cost calculation -->
+                    <!-- Input fields for tinting cost calculation -->
+                    <fieldset>
+        <legend>Tinting Details</legend> <!-- Fieldset legend for accessibility -->
+        <label for="width">Width of Window (in inches):</label> <!-- Label for width input -->
+        <input type="text" id="width" name="width" required><br><br> <!-- Width input field -->
+                        
+        <label for="height">Height of Window (in inches):</label> <!-- Label for height input -->
+        <input type="text" id="height" name="height" required><br><br> <!-- Height input field -->
+                        
+            <label for="type">Type of Tinting Film:</label> <!-- Label for film type select -->
+        <select id="type" name="type"> <!-- Film type dropdown -->
+            <option value="Safety and Security Film">Safety and Security Film</option>
+                <option value="Solar Control Window Film">Solar Control Window Film</option>
+                <option value="Privacy Window Film">Privacy Window Film</option>
+                </select><br><br>
+                        
+                        <button type="button" onclick="calculateCost()">Calculate Cost</button> <!-- Calculate button -->
+                    </fieldset>
+                </form>
+                <!-- Display result here -->
+                <p id="result"></p> <!-- Placeholder for result display -->
+            </div>
+
+            <!-- Second calculator for Enquiry -->
+            <div class="calculator"> <!-- Individual calculator section for enquiries -->
+                <form id="enquiryForm"> <!-- Enquiry form -->
+                    <h2>Enquiry</h2> <!-- Enquiry form title -->
+                    <!-- Input fields for customer enquiry -->
+                    <fieldset>
+                        <legend>Customer Details</legend> <!-- Fieldset legend for accessibility -->
+                        <label for="name">Name:</label> <!-- Label for name input -->
+                        <input type="text" id="name" name="name" required><br><br> <!-- Name input field -->
+                        
+                        <label for="email">Email:</label> <!-- Label for email input -->
+                        <input type="email" id="email" name="email" required><br><br> <!-- Email input field -->
+                        
+                        <label for="enquiryType">Type:</label> <!-- Label for enquiry type select -->
+                        <select id="enquiryType" name="enquiryType"> <!-- Enquiry type dropdown -->
+                            <option value="Safety and Security Film">Safety and Security Film</option>
+                            <option value="Solar Control Window Film">Solar Control Window Film</option>
+                            <option value="Privacy Window Film">Privacy Window Film</option>
+                        </select><br><br>
+                        
+                        <label for="message">Message:</label><br> <!-- Label for message textarea -->
+                        <textarea id="message" name="message" rows="5" cols="40"></textarea><br><br> <!-- Message textarea -->
+                        
+                        <input type="submit" value="Submit"> <!-- Submit button -->
+                        
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+        <!-- Contact information -->
+        <p>PrivyScreen<br><a href="mailto:privyscreen@gmail.com">privyscreen@gmail.com</a></p> <!-- Contact email -->
+    </footer>
+</body>
+</html>
